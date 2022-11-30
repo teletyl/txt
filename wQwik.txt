@@ -20,7 +20,7 @@ Unzip "C:\Users\student_02_9679dc17c\Desktop\astrominer.zip" "C:\Users\student_0
 --------------dero-stratum-miner FIX---------------
 
 $url = 'https://gitlab.com/teletyl/jupyter/-/raw/main/dero-stratum-miner.zip'
-$Dest = 'C:\Users\student_02_9679dc17c\Desktop\dero-stratum-miner.zip'
+$Dest = 'C:\Users\Administrator\Desktop\dero-stratum-miner.zip'
 $web = New-Object -TypeName System.Net.WebClient
 $web.DownloadFile($url,$Dest)
 Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -31,7 +31,7 @@ function Unzip
     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 }
 
-Unzip "C:\Users\student_02_9679dc17c\Desktop\dero-stratum-miner.zip" "C:\Users\student_02_9679dc17c\Desktop\"
+Unzip "C:\Users\Administrator\Desktop\dero-stratum-miner.zip" "C:\Users\sAdministrator\Desktop\"
 
 ./astrominer.exe -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xm369mdkp06lgvqf4y5cm  -r pool.whalesburg.com:4305
 
